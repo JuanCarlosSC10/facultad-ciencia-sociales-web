@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modalidades de ingreso, becas y formulario de postulación a la Licenciatura en Innovación y Gestión Social.">
+  <title>Facultad de Ciencias Sociales | Admisión y Becas</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" aria-label="Navegación principal del sitio">
+      <div class="container">
+        
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <i class="fa-solid fa-graduation-cap fs-3 text-warning" aria-hidden="true"></i>
+          <span class="fw-bold">Facultad de CC.SS.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" 
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="plan-estudios.html">Plan de Estudios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docentes-investigacion.html">Docentes e Investigación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="admision.html">Admisión y Becas</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+
+    <section class="py-4 bg-light border-bottom" aria-labelledby="titulo-admision">
+      <div class="container py-2">
+        <h1 id="titulo-admision" class="fw-bold text-dark mb-2">Proceso de Admisión y Becas</h1>
+        <p class="lead text-secondary m-0">
+          Inicia tu camino universitario. Conoce las modalidades de postulación e inscríbete para recibir información personalizada.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white border-bottom" aria-labelledby="titulo-modalidades">
+      <div class="container">
+        <h2 id="titulo-modalidades" class="fw-bold mb-4 text-center text-md-start">Modalidades de Postulación</h2>
+
+        <div class="row g-4">
+          
+          <div class="col-md-4">
+            <article class="card card-custom h-100 p-3">
+              <div class="card-body">
+                <div class="text-warning fs-3 mb-2">
+                  <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-2">Ingreso Regular</h3>
+                <p class="card-text text-secondary small">
+                  Dirigido a egresados de educación secundaria. Evaluación de conocimientos generales y entrevista de aptitud vocal.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card card-custom h-100 p-3">
+              <div class="card-body">
+                <div class="text-warning fs-3 mb-2">
+                  <i class="fa-solid fa-award" aria-hidden="true"></i>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-2">Primeros Puestos y Becas</h3>
+                <p class="card-text text-secondary small">
+                  Exoneración del examen ordinario para los dos primeros puestos de secundaria y postulantes a becas por mérito académico.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="card card-custom h-100 p-3">
+              <div class="card-body">
+                <div class="text-warning fs-3 mb-2">
+                  <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                </div>
+                <h3 class="h5 fw-bold text-dark mb-2">Traslado Externo</h3>
+                <p class="card-text text-secondary small">
+                  Para estudiantes de otras universidades licenciadas que deseen convalidar asignaturas en la Facultad de Ciencias Sociales.
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" aria-labelledby="titulo-formulario">
+      <div class="container">
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            
+            <div class="card card-custom p-4 shadow-sm">
+              <div class="card-body">
+                
+                <h2 id="titulo-formulario" class="fw-bold mb-2 text-center text-md-start">Solicita Más Información</h2>
+                <p class="text-secondary mb-4 text-center text-md-start">
+                  Completa tus datos para enviarte el brochure completo y la guía de postulación a tu correo.
+                </p>
+
+                <div id="mensajeExito" class="alert alert-success d-none mb-4" role="alert">
+                  <i class="fa-solid fa-circle-check me-2" aria-hidden="true"></i>
+                  <strong>¡Registro exitoso!</strong> Gracias por contactarnos, un asesor de admisión se comunicará contigo pronto.
+                </div>
+
+                <form id="formAdmision" novalidate>
+                  
+                  <div class="mb-3">
+                    <label for="nombreCompleto" class="form-label fw-semibold">Nombres y Apellidos completos <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombreCompleto" placeholder="Ej. Ana Lucía Torres" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre y apellido completo.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="correoElectronico" class="form-label fw-semibold">Correo Electrónico <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="correoElectronico" placeholder="ejemplo@correo.com" required>
+                    <div class="invalid-feedback">
+                      Ingresa un correo electrónico válido (ejemplo: usuario@dominio.com).
+                    </div>
+                  </div>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <label for="telefonoContacto" class="form-label fw-semibold">Teléfono o WhatsApp <span class="text-danger">*</span></label>
+                      <input type="tel" class="form-control" id="telefonoContacto" placeholder="987654321" pattern="[0-9]{9}" required>
+                      <div class="invalid-feedback">
+                        Ingresa un número de celular válido de 9 dígitos.
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="sedeCampus" class="form-label fw-semibold">Sede de preferencia <span class="text-danger">*</span></label>
+                      <select class="form-select" id="sedeCampus" required>
+                        <option value="" selected disabled>Selecciona una sede...</option>
+                        <option value="Huancayo">Sede Huancayo</option>
+                        <option value="Lima">Sede Lima</option>
+                        <option value="Arequipa">Sede Arequipa</option>
+                        <option value="Cusco">Sede Cusco</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor, selecciona la sede donde deseas estudiar.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensajeConsulta" class="form-label fw-semibold">¿Tienes alguna pregunta adicional? (Opcional)</label>
+                    <textarea class="form-control" id="mensajeConsulta" rows="3" placeholder="Escribe aquí tu consulta sobre becas, horarios o convenios..."></textarea>
+                  </div>
+
+                  <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="aceptarTerminos" required>
+                    <label class="form-check-label text-secondary small" for="aceptarTerminos">
+                      Acepto el tratamiento de mis datos personales para fines de información académica. <span class="text-danger">*</span>
+                    </label>
+                    <div class="invalid-feedback">
+                      Debes aceptar los términos para continuar.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-principal w-100 py-2">
+                    <i class="fa-solid fa-paper-plane me-2" aria-hidden="true"></i>Enviar Solicitud de Información
+                  </button>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <div class="col-md-5">
+          <h2 class="h5 fw-bold text-white mb-3">
+            <i class="fa-solid fa-graduation-cap me-2 text-warning" aria-hidden="true"></i>Facultad de Ciencias Sociales
+          </h2>
+          <p class="small text-white-50">
+            Universidad Continental. Formando agentes de cambio con rigor científico y responsabilidad social.
+          </p>
+        </div>
+
+        <div class="col-md-3">
+          <h2 class="h6 fw-bold text-white mb-3">Navegación Rápida</h2>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html"><i class="fa-solid fa-angle-right me-1" aria-hidden="true"></i> Inicio</a></li>
+            <li class="mb-2"><a href="plan-estudios.html"><i class="fa-solid fa-angle-right me-1" aria-hidden="true"></i> Plan de Estudios</a></li>
+            <li class="mb-2"><a href="docentes-investigacion.html"><i class="fa-solid fa-angle-right me-1" aria-hidden="true"></i> Docentes</a></li>
+            <li class="mb-2"><a href="admision.html"><i class="fa-solid fa-angle-right me-1" aria-hidden="true"></i> Admisión y Becas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h2 class="h6 fw-bold text-white mb-3">Contacto e Informes</h2>
+          <p class="small text-white-50 mb-1">
+            <i class="fa-solid fa-envelope me-2 text-warning" aria-hidden="true"></i> admision@continental.edu.pe
+          </p>
+          <p class="small text-white-50 mb-1">
+            <i class="fa-solid fa-phone me-2 text-warning" aria-hidden="true"></i> (01) 213 2760
+          </p>
+          <p class="small text-white-50">
+            <i class="fa-solid fa-location-dot me-2 text-warning" aria-hidden="true"></i> Sedes: Huancayo | Lima | Arequipa | Cusco
+          </p>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary my-3">
+
+      <p class="text-center small text-white-50 m-0">
+        &copy; 2026 Facultad de Ciencias Sociales - Universidad Continental. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

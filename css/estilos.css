@@ -1,0 +1,124 @@
+:root {
+  /* variable de colores  */
+  --color-primario: #1b365d;      
+  --color-secundario: #d9531e;   
+  --color-fondo: #f8f9fa;         
+  --color-tarjeta: #ffffff;       
+  --color-texto: #212529;         
+  --color-texto-suave: #4a5568;   
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* Ajuste de los titulos  */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+
+/* Enlace visible solo al presionar la tecla TAB */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  padding: 12px 20px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 6px 6px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Borde visible en botones y enlaces seleccionados con teclado */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 3px solid var(--color-secundario) !important;
+  outline-offset: 3px !important;
+}
+
+
+/* estilo para Navbar */
+.navbar-custom {
+  background-color: var(--color-primario);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  padding: 8px 16px !important;
+  transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Indicador de pagina activa en el menu */
+.navbar-custom .nav-link.active {
+  color: #ffffff !important;
+  border-bottom: 3px solid var(--color-secundario);
+}
+
+/* Boton principal personalizado */
+.btn-principal {
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-principal:hover {
+  background-color: #ba4313;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Tarjetas de contenido  */
+.card-custom {
+  background-color: var(--color-tarjeta);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Pie de pagina  */
+footer {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  padding: 40px 0 20px 0;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
