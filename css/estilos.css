@@ -1,11 +1,15 @@
+/* variable de colores  */
 :root {
-  /* variable de colores  */
-  --color-primario: #1b365d;      
-  --color-secundario: #d9531e;   
-  --color-fondo: #f8f9fa;         
-  --color-tarjeta: #ffffff;       
-  --color-texto: #212529;         
-  --color-texto-suave: #4a5568;   
+  --color-primario: #0f172a;      
+  --color-primario-suave: #1e293b;  
+  --color-secundario: #c2410c;    
+  --color-secundario-hover: #9a3412;
+  --color-dorado: #d97706;         
+  --color-fondo: #f8fafc;           
+  --color-tarjeta: #ffffff;        
+  --color-borde: #e2e8f0;          
+  --color-texto: #1e293b;           
+  --color-texto-suave: #64748b;    
 }
 
 body {
@@ -17,10 +21,10 @@ body {
 
 /* Ajuste de los titulos  */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-primario);
+  color: var(--color-primario-suave);
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
-
 
 /* Enlace visible solo al presionar la tecla TAB */
 .skip-link {
@@ -33,7 +37,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: top 0.2s ease;
 }
 
@@ -49,30 +54,51 @@ select:focus-visible,
 textarea:focus-visible {
   outline: 3px solid var(--color-secundario) !important;
   outline-offset: 3px !important;
+  border-radius: 4px;
 }
 
+/* Header para mantener la navegación siempre arriba */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
 
 /* estilo para Navbar */
 .navbar-custom {
-  background-color: var(--color-primario);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.12);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
 .navbar-custom .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(241, 245, 249, 0.85) !important;
   font-weight: 500;
   padding: 8px 16px !important;
-  transition: color 0.2s ease;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .navbar-custom .nav-link:hover {
   color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Indicador de pagina activa en el menu */
 .navbar-custom .nav-link.active {
   color: #ffffff !important;
-  border-bottom: 3px solid var(--color-secundario);
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-bottom: 2px solid var(--color-dorado);
 }
 
 /* Boton principal personalizado */
@@ -81,41 +107,73 @@ textarea:focus-visible {
   color: #ffffff;
   font-weight: 600;
   border: none;
-  padding: 12px 26px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  padding: 12px 28px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-principal:hover {
-  background-color: #ba4313;
+  background-color: var(--color-secundario-hover);
   color: #ffffff;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(194, 65, 12, 0.35);
+}
+
+.btn-principal:active {
+  transform: translateY(0);
 }
 
 /* Tarjetas de contenido  */
 .card-custom {
   background-color: var(--color-tarjeta);
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .card-custom:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.text-warning {
+  color: var(--color-dorado) !important;
+}
+
+/* Estilos de Acordeón para Plan de Estudios */
+.accordion-item {
+  border: 1px solid var(--color-borde);
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f1f5f9;
+  color: var(--color-primario);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--color-borde);
 }
 
 /* Pie de pagina  */
 footer {
   background-color: var(--color-primario);
-  color: #ffffff;
-  padding: 40px 0 20px 0;
+  color: #f8fafc;
+  padding: 50px 0 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 footer a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(241, 245, 249, 0.75);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 footer a:hover {
