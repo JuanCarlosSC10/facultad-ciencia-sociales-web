@@ -9,7 +9,8 @@
   --color-tarjeta: #ffffff;        
   --color-borde: #e2e8f0;          
   --color-texto: #1e293b;           
-  --color-texto-suave: #64748b;    
+  --color-texto-suave: #64748b;  
+  --color-boton:  #0cc215;
 }
 
 body {
@@ -64,6 +65,11 @@ header {
   z-index: 1030;
 }
 
+.logo-navbar {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
 /* estilo para Navbar */
 .navbar-custom {
   background-color: rgba(15, 23, 42, 0.95) !important;
@@ -103,21 +109,21 @@ header {
 
 /* Boton principal personalizado */
 .btn-principal {
-  background-color: var(--color-secundario);
+  background-color: var(--color-boton);
   color: #ffffff;
   font-weight: 600;
   border: none;
   padding: 12px 28px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.25);
+  box-shadow: 0 2px 8px rgba(27, 194, 12, 0.25);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-principal:hover {
-  background-color: var(--color-secundario-hover);
+  background-color: var(--color-boton);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(194, 65, 12, 0.35);
+  box-shadow: 0 6px 16px rgba(23, 138, 8, 0.35);
 }
 
 .btn-principal:active {
